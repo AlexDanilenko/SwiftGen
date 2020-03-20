@@ -142,6 +142,7 @@
 		DDDE52781FAF81DB004203BE /* StencilContexts in Resources */ = {isa = PBXBuildFile; fileRef = DDDE52761FAF81DB004203BE /* StencilContexts */; };
 		DDDE52791FAF81DB004203BE /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = DDDE52771FAF81DB004203BE /* Resources */; };
 		DDFB05E21FC5170F0019E199 /* SwiftGenKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD428DF81FC50F56001649D6 /* SwiftGenKit.framework */; };
+		FE87036A2424F651004F1E57 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8703682424F41E004F1E57 /* Games.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -150,6 +151,8 @@
 			compilerSpec = com.apple.compilers.pbxcp;
 			filePatterns = "*.storyboard";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -160,6 +163,8 @@
 			compilerSpec = com.apple.compilers.pbxcp;
 			filePatterns = "*.xcassets";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -170,6 +175,8 @@
 			compilerSpec = com.apple.compilers.pbxcp;
 			filePatterns = "*.strings";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -180,6 +187,8 @@
 			compilerSpec = com.apple.compilers.pbxcp;
 			filePatterns = "*.strings";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -190,6 +199,8 @@
 			compilerSpec = com.apple.compilers.pbxcp;
 			filePatterns = "*.xcassets";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -200,6 +211,8 @@
 			compilerSpec = com.apple.compilers.pbxcp;
 			filePatterns = "*.storyboard";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -210,6 +223,8 @@
 			compilerSpec = com.apple.compilers.pbxcp;
 			filePatterns = "*.strings";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -220,6 +235,8 @@
 			compilerSpec = com.apple.compilers.pbxcp;
 			filePatterns = "*.xcassets";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -230,6 +247,8 @@
 			compilerSpec = com.apple.compilers.pbxcp;
 			filePatterns = "*.storyboard";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 			);
@@ -426,6 +445,7 @@
 		DDDE52771FAF81DB004203BE /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		F65F1C81352617108FBA45C0 /* Pods-swiftgen-SwiftGen UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftgen-SwiftGen UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftgen-SwiftGen UnitTests/Pods-swiftgen-SwiftGen UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F8031AB7FD88D5F010179EDC /* Pods_swiftgen_Templates_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftgen_Templates_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE8703682424F41E004F1E57 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,6 +676,7 @@
 		DD428E061FC50FBF001649D6 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				FE8703672424F3F9004F1E57 /* Games */,
 				DD9F687620955D51004EB720 /* AssetsCatalog */,
 				DD428E081FC50FBF001649D6 /* Colors */,
 				C38E571320FF8F8F009C9C23 /* CoreData */,
@@ -843,6 +864,14 @@
 			path = SwiftGenKitTests;
 			sourceTree = "<group>";
 		};
+		FE8703672424F3F9004F1E57 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				FE8703682424F41E004F1E57 /* Games.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -885,7 +914,6 @@
 			buildConfigurationList = 234F7E781DEBD5C5001B3C10 /* Build configuration list for PBXNativeTarget "swiftgen" */;
 			buildPhases = (
 				51B3E1E55873F072BF1E3406 /* [CP] Check Pods Manifest.lock */,
-				234F7E7C1DEBD742001B3C10 /* ⚠️ SwiftLint */,
 				234F7E6A1DEBD5C5001B3C10 /* Sources */,
 				234F7E6B1DEBD5C5001B3C10 /* Frameworks */,
 				234F7E6C1DEBD5C5001B3C10 /* Resources */,
@@ -907,7 +935,6 @@
 			buildConfigurationList = DD428E011FC50F56001649D6 /* Build configuration list for PBXNativeTarget "SwiftGenKit" */;
 			buildPhases = (
 				3C77E1DB46FD97DA1A720A7E /* [CP] Check Pods Manifest.lock */,
-				DD9F4765206ADC29006B0DCA /* ⚠️ SwiftLint */,
 				DD428DF31FC50F56001649D6 /* Sources */,
 				DD428DF41FC50F56001649D6 /* Frameworks */,
 				DD428DF51FC50F56001649D6 /* Headers */,
@@ -1008,6 +1035,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1105,20 +1133,6 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		234F7E7C1DEBD742001B3C10 /* ⚠️ SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "⚠️ SwiftLint";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [[ ! $CI && ! $NO_CODE_LINT ]]; then\n  \"$SRCROOT/Scripts/SwiftLint.sh\" \"swiftgen_sources\"\nfi";
 		};
 		2C9D66D627FB898D3DA8D22E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1298,20 +1312,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swiftgen-Templates UnitTests/Pods-swiftgen-Templates UnitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD9F4765206ADC29006B0DCA /* ⚠️ SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "⚠️ SwiftLint";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [[ ! $CI && ! $NO_CODE_LINT ]]; then\n  \"$SRCROOT/Scripts/SwiftLint.sh\" \"swiftgenkit_sources\"\nfi\n";
-		};
 		DD9F4766206ADC4C006B0DCA /* ⚠️ SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1423,6 +1423,7 @@
 				C350BE3A20FFCD750043D7C5 /* Entity.swift in Sources */,
 				DDB0B99D209CE4B100E467C2 /* YamlContext.swift in Sources */,
 				DD9F687F20955E07004EB720 /* Font.swift in Sources */,
+				FE87036A2424F651004F1E57 /* Games.swift in Sources */,
 				C33A142921064E3400D3CBA6 /* FetchRequest.swift in Sources */,
 				DD428E1B1FC50FBF001649D6 /* ColorsJSONFileParser.swift in Sources */,
 				DD9F688120955F57004EB720 /* CTFont.swift in Sources */,

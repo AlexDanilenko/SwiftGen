@@ -84,6 +84,12 @@ let allParserCommands: [ParserCLI] = [
     description: "generate code for custom yaml configuration files",
     pathDescription: "YAML files (or directories that contain them) to parse."
   ),
+  .init(
+    parserType: Yaml.Parser.self,
+    name: "games",
+    description: "generate code for game files",
+    pathDescription: "Game directories (that contain them) to parse."
+  ),
 
   // Deprecated
   .init(
