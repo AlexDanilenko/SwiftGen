@@ -85,7 +85,7 @@ let allParserCommands: [ParserCLI] = [
     pathDescription: "YAML files (or directories that contain them) to parse."
   ),
   .init(
-    parserType: Yaml.Parser.self,
+    parserType: Game.Parser.self,
     name: "games",
     description: "generate code for game files",
     pathDescription: "Game directories (that contain them) to parse."
