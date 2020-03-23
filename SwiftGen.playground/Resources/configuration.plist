@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Environment</key>
-	<string>development</string>
+	<string>development_test</string>
 	<key>Options</key>
 	<dict>
 		<key>Animation Style</key>

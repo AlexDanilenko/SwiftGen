@@ -26,18 +26,24 @@ public enum Game {
     }
     
     private func addGame(_ game: String) {
+        
       entries.insert(game)
     }
     
     public func stencilContext() -> [String : Any] {
-      let games = entries
-        .map { (name: String) -> [String: Any] in
-          // Family
-          return [
-            "name": name,
-          ]
-      }
-      
+        
+        let games = Dictionary(
+            grouping: Array(entries)
+                .map({ (rawGame) -> (String, String, String) in
+                    let arr = rawGame.split(separator: "_").map(String.init)
+                    let tuple = (provider: arr.first!, gameIdentifier: arr.last!, propertName:  arr.last!.replacingOccurrences(of: "-", with: "_").replacingOccurrences(of: ".", with: "_"))
+                    return tuple
+                })
+        ){ $0.0 }
+            .map({ (key, values) in
+                ["provider": key, "values": values.map { ["gameIdentifier": $0.1, "propertyName": $0.2] } ]
+            })
+        
       return [
         "games": games
       ]

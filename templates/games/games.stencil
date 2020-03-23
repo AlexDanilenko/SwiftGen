@@ -1,0 +1,33 @@
+// swiftlint:disable all
+// 
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+// DO NOT EDIT
+
+import Foundation
+
+public extension Game {
+    private enum Error: Swift.Error {
+        case undefinedID(String)
+    }
+    
+    public enum LaunchCode: String, Decodable {
+        public init(from decoder: Decoder) throws {
+            let container = try decoder.singleValueContainer()
+            let stringID = try container.decode(String.self)
+            if let _self = Game.LaunchCode(rawValue: stringID) {
+                self = _self
+            } else {
+                throw Error.undefinedID(stringID)
+            }
+        }
+
+{% if games %}
+	{% for bundle in games %}
+//MARK: - {{bundle.provider}} games
+	   {% for game in bundle.values %}
+		case {{bundle.provider}}_{{game.propertyName}} = "{{game.gameIdentifier}}"
+	   {% endfor %}
+    {% endfor %}
+{% endif %}
+	}
+}
