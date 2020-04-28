@@ -5,7 +5,6 @@
 //
 import Foundation
 import PathKit
-import SwiftGenKit
 
 public enum Game {
   public final class Parser: SwiftGenKit.Parser {
@@ -31,21 +30,24 @@ public enum Game {
     }
     
     public func stencilContext() -> [String : Any] {
-        
-        let games = Dictionary(
-            grouping: Array(entries)
-                .map({ (rawGame) -> (String, String, String) in
-                    let arr = rawGame.split(separator: "_").map(String.init)
-                    let tuple = (provider: arr.first!, gameIdentifier: arr.last!, propertName:  arr.last!.replacingOccurrences(of: "-", with: "_").replacingOccurrences(of: ".", with: "_"))
-                    return tuple
-                })
-        ){ $0.0 }
-            .map({ (key, values) in
-                ["provider": key, "values": values.map { ["gameIdentifier": $0.1, "propertyName": $0.2] } ]
-            })
-        
+      let games = Array(entries).map({ (rawGame) -> (String, String, String) in
+          let arr = rawGame.split(separator: "_").map(String.init)
+          let identifier = arr.dropFirst().joined(separator: "_")
+          return (
+              provider: arr.first!,
+              gameIdentifier: identifier,
+              propertName: identifier.replacingOccurrences(of: "-", with: "_").replacingOccurrences(of: ".", with: "_")
+          )
+      })
+      
+      let gamesDictionary = Dictionary(grouping: games, by: { (provider: String, _, _) in
+          return provider
+      }).map { (key, values) in
+          ["provider": key, "values": values.map { ["gameIdentifier": $0.1, "propertyName": $0.2] } ]
+      }
+      
       return [
-        "games": games
+        "games": gamesDictionary
       ]
     }
   }
